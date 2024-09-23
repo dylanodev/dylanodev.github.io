@@ -1,0 +1,96 @@
+.users-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.user-form {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.user-form input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 300px; /* Largeur ajustée */
+  max-width: 100%; /* Responsive */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8; /* Réduit l'opacité au survol */
+}
+
+.add-button {
+  background-color: #ff4c4c; /* Rouge */
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #e63939; /* Rouge foncé au survol */
+}
+
+.message {
+  color: green;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.user-photo {
+  width: 50px; /* Largeur de l'image */
+  height: 50px; /* Hauteur de l'image */
+  border-radius: 50%; /* Pour un affichage circulaire */
+  object-fit: cover; /* Pour garder les proportions */
+}
+
+
+.animated-message {
+  position: absolute; /* Pour positionner l'élément par rapport à l'écran */
+  right: 0; /* Aligne le texte à droite de l'écran */
+  top: 50px; /* Ajuste la hauteur en fonction de vos besoins */
+  font-size: 24px;
+  color: #333;
+
+  /* Animation */
+  animation: slideIn 5s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Commence hors de l'écran à droite */
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0); /* L'élément est visible à cet état */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); /* Quitte l'écran par la gauche */
+  }
+}
+
